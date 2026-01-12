@@ -410,7 +410,6 @@ footer{
     url("assets/aboutbg.jpg") center/cover no-repeat;
 }
 
-
 .about-title{
   text-align:center;
   font-size:2.8rem;
@@ -418,7 +417,6 @@ footer{
   letter-spacing:3px;
   color:#ffffff;
 }
-
 .about-box{
   max-width:1600px;
   margin:auto;
@@ -432,13 +430,11 @@ footer{
   padding:60px;
 
 }
-
 .about-photo img{
   width:100%;
   border-radius:22px;
   box-shadow:0 40px 120px rgba(0,0,0,.15);
 }
-
 .about-tabs{
   display:flex;
   gap:28px;
@@ -464,11 +460,9 @@ footer{
   color:#64748b;
   position:relative;
 }
-
 .tab-btn.active{
   color:#0ea5e9;
 }
-
 .tab-btn.active::after{
   content:"";
   position:absolute;
@@ -500,6 +494,11 @@ footer{
     max-width:100%;
   }
 }
+@keyframes fadeTab{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
 
 
 
