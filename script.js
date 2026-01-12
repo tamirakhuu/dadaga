@@ -10,9 +10,12 @@ if(drawerClose){
   drawerClose.onclick = ()=> drawer.classList.remove("show");
 }
 
-drawer.querySelectorAll("a").forEach(a=>{
-  a.onclick = ()=> drawer.classList.remove("show");
-});
+if(drawer){
+  drawer.querySelectorAll("a").forEach(a=>{
+    a.onclick = ()=> drawer.classList.remove("show");
+  });
+}
+;
 
 
 const faders = document.querySelectorAll(".fade-in");
@@ -130,23 +133,24 @@ if (track && slides.length && next && prev) {
   }, 3000);
 }
 
+/* about tab */
+const aboutTabs = document.querySelectorAll(".tab-btn");
+const aboutContents = document.querySelectorAll(".tab-content");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const tabBtns = document.querySelectorAll(".tab-btn");
-  const tabContents = document.querySelectorAll(".tab-content");
+aboutTabs.forEach(btn => {
+  btn.addEventListener("click", () => {
 
-  if (!tabBtns.length) return;
+    aboutTabs.forEach(b => b.classList.remove("active"));
+    aboutContents.forEach(c => c.classList.remove("active"));
 
-  tabBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const target = btn.dataset.tab;
+    btn.classList.add("active");
+    const target = btn.getAttribute("data-tab");
+    const targetEl = document.getElementById(target);
 
-      tabBtns.forEach(b => b.classList.remove("active"));
-      tabContents.forEach(c => c.classList.remove("active"));
-
-      btn.classList.add("active");
-      document.getElementById(target).classList.add("active");
-    });
+    if (targetEl) {
+      targetEl.classList.add("active"); 
+      targetEl.style.animation = "fadeTab .35s ease";
+    }
   });
 });
 
