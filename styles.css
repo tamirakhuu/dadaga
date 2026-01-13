@@ -31,7 +31,11 @@ h1,h2,h3,
 #about p,
 .testimonials,.testimonials *,
 .location,.location *,
-footer,footer *{
+footer,footer *,
+.section,
+.section *,
+.tab-btn,
+.tab-btn *{
   font-family:'Comfortaa',sans-serif;
   letter-spacing:.6px;
 }
@@ -336,7 +340,6 @@ footer{
 }
 }
 /* aboutttt */
-
 .about-pro{
   padding:160px 20px 120px;
   color:#fff;
@@ -536,12 +539,9 @@ footer{
   filter:none;
   transform:scale(1.08)}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
 .marquee:hover .marquee-track{
   animation-play-state:paused;
 }
-
-
 @media(max-width:768px){
   .footer-social{
     margin-bottom:26px;
