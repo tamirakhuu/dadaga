@@ -65,6 +65,10 @@
 .news-body > :last-child{
   margin-bottom:0 !important;
 }
+.news-inline-img-wrap{
+  margin:60px 0;
+  text-align:center;
+}
 
 @media(max-width:768px){
   .news-body{padding:30px}
