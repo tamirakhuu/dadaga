@@ -538,6 +538,33 @@ footer{
 .partner-link:hover img{
   filter:none;
   transform:scale(1.08)}
+
+  .contact-mail{
+  color: var(--soft);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+.contact-mail::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background: var(--soft);
+  transition:.3s;
+}
+
+.contact-mail:hover::after{
+  width:100%;
+}
+
+.contact-mail:hover{
+  color:#93c5fd;
+}
+
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .marquee:hover .marquee-track{
   animation-play-state:paused;
