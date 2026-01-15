@@ -1,0 +1,27 @@
+.jobs-hero{
+  padding:140px 20px 80px;
+  text-align:center;
+}
+.jobs-hero h1{
+  font-size:2.6rem;
+  color:#60a5fa;
+}
+.jobs-list{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+  padding-bottom:120px;
+}
+.job-card{
+  background:#020617;
+  border:1px solid rgba(96,165,250,.15);
+  padding:26px;
+  border-radius:18px;
+}
+.job-card a{
+  display:inline-block;
+  margin-top:14px;
+  color:#60a5fa;
+}
