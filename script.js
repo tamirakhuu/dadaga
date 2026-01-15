@@ -160,5 +160,20 @@ aboutTabs.forEach(btn => {
 });
 
 
+function openJob(id){
+  document.getElementById(id).classList.add("show");
+}
+
+function closeJob(){
+  document.querySelectorAll(".job-modal").forEach(m=>m.classList.remove("show"));
+}
+document.querySelectorAll(".job-modal").forEach(m=>{
+  m.addEventListener("click", e=>{
+    if(e.target === m) closeJob();
+  });
+});
+
+
+
 
 
