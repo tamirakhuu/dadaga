@@ -595,6 +595,13 @@ footer{
   color:white;
   text-shadow:0 0 12px rgba(96,165,250,.8);
 }
+.service-link{
+  text-decoration:none;
+  color:inherit;
+}
+.service-link:hover{
+  transform:translateY(-6px);
+}
 
 
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
